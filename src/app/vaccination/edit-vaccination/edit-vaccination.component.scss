@@ -1,0 +1,46 @@
+.mat-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 3px 14px rgb(0 0 0 / 20%);
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    display: grid;
+    padding: 30px;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: 720px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 540px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-wrapper {
+    width: 100%;
+    text-align: right;
+
+    button {
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: green;
+        margin-left: auto;
+        padding: 10px 20px;
+        color: white;
+        margin: 30px;
+        margin-bottom: 0;
+        cursor: pointer;
+        &:disabled{
+            opacity: 0.5
+        }
+    }
+}

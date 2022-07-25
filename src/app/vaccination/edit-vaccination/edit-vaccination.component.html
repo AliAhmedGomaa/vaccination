@@ -1,0 +1,75 @@
+<mat-card>
+
+    <form [formGroup]="editVaccinationForm" (ngSubmit)="submit()">
+        <div class="form-wrapper">
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>vaccination name</mat-label>
+                <input matInput formControlName="vaccinationName">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>vaccination Against</mat-label>
+                <input matInput formControlName="vaccinationAgainst">
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill">
+                <mat-label>time</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="time">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>doseNumber</mat-label>
+                <input matInput formControlName="doseNumber">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Health Professional</mat-label>
+                <input matInput formControlName="healthProfessional">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Vaccination Reason</mat-label>
+                <input matInput formControlName="vaccinationReason">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Lot Number</mat-label>
+                <input matInput formControlName="lotNumber">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>vaccination name</mat-label>
+                <input matInput formControlName="vaccinationName">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Vaccination Position</mat-label>
+                <input matInput formControlName="vaccinationPosition">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Vaccination Method</mat-label>
+                <input matInput formControlName="vaccinationMethod">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>status</mat-label>
+                <input matInput formControlName="status">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Vaccinated By</mat-label>
+                <input matInput formControlName="vaccinatedBy">
+            </mat-form-field>
+        </div>
+
+        <div class="btn-wrapper">
+            <button type="submit" [disabled]="editVaccinationForm.invalid">Save</button>
+        </div>
+    </form>
+</mat-card>

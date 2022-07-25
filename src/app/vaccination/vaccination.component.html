@@ -1,0 +1,109 @@
+    <mat-card class="mat-card">
+      <div class="compact">
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Vaccination Name
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.vaccinationName 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Vaccination Against
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.vaccinationAgainst 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Time</mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.time | date: 'MMM d, y' 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Dose Number
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.doseNumber 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Health Professional
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.healthProfessional
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Vaccination Reason
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.vaccinationReason 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+      </div>
+  
+      <!-- no need fo this seperator -->
+      <!-- <div class="content-separator"></div>  -->
+  
+  
+      <div class="disputed">
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Lot Number
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.lotNumber
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Vaccination Position
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.vaccinationPosition 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Vaccination Method
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.vaccinationMethod 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Status</mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.status 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+  
+      </div>
+      <div class="content-separator"></div>
+  
+      <div class="disputed">
+  
+        <mat-card-content class="mat-card-content">
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-left">Vaccinated By
+          </mat-card-subtitle>
+          <mat-card-subtitle class="mat-card-content__subtitle mat-card-content__subtitle-right">{{
+            vaccination.vaccinatedBy 
+            }}</mat-card-subtitle>
+        </mat-card-content>
+      </div>
+  
+        <div class="edit" (click) = "setCanEdit()">
+          <mat-icon>edit</mat-icon>
+        </div>
+      
+    </mat-card>
+  

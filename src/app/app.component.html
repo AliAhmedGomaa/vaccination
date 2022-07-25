@@ -1,0 +1,15 @@
+<!-- use main and section tags for better semantic html for better browser readability-->
+<main>
+
+  <section class="wrapper">
+    <div *ngIf="canEdit then edit; else view"></div>  
+  </section>
+
+  <ng-template #view>
+    <app-vaccination></app-vaccination>
+  </ng-template>
+
+  <ng-template #edit>
+    <app-edit-vaccination></app-edit-vaccination>
+  </ng-template>
+</main>
