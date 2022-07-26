@@ -1,3 +1,4 @@
+import { Vaccination } from './../../shared/interfaces/Vaccination.interface';
 import { VaccinationService } from './../../shared/services/vaccination.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,7 +19,8 @@ export class EditVaccimationComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.initEditVaccinationForm()
+    this.initEditVaccinationForm();
+    this.populateForm();
   }
 
   initEditVaccinationForm() {
@@ -35,6 +37,12 @@ export class EditVaccimationComponent implements OnInit {
       status: ['', [Validators.required]],
       vaccinatedBy: ['', [Validators.required]],
     })
+  }
+
+  populateForm() {
+    this.vaccinationService.vaccination.subscribe((data: Vaccination) => {
+      this.editVaccinationForm.patchValue(data)
+    });
   }
 
   submit() {

@@ -19,7 +19,6 @@ export class VaccinationComponent implements OnInit {
   // date: dayjs.Dayjs = dayjs('2013-01-10'); // use angular date pipe instead
 
   ngOnInit(): void {
-
     this.vaccinationService.vaccination.subscribe((data: Vaccination) => {
       this.vaccination = data;
     });
