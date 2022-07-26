@@ -20,7 +20,7 @@
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
+            </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>doseNumber</mat-label>
@@ -57,9 +57,21 @@
                 <input matInput formControlName="vaccinationMethod">
             </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>status</mat-label>
-                <input matInput formControlName="status">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                    <mat-option value="completed">
+                        completed
+                    </mat-option>
+                    <mat-option value="not completed">
+                        not completed
+                    </mat-option>
+
+                    <mat-option value="pending">
+                        pending
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
